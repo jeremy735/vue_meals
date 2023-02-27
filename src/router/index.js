@@ -5,6 +5,7 @@ import Home from '../views/Home.vue'
 import MealsByIngredient from '../views/MealsByIngredient.vue'
 import MealsByLetter from '../views/MealsByLetter.vue'
 import MealsByName from '../views/MealsByName.vue'
+import MealDetails from '../views/MealDetails.vue'
 
 const routes =[
     {
@@ -17,20 +18,25 @@ const routes =[
                 component: Home,
             },
             {
-                path: "/By-name/:name?",
+                path: "/by-name/:name?",
                 name: "byName",
                 component: MealsByName,
             },
             {
-                path: "/By-lettet/:letter?",
+                path: "/by-lettet/:letter?",
                 name: "byLetter",
                 component: MealsByLetter,
             },
             {
-                path: "/By-ingredient/:ingredient?",
+                path: "/by-ingredient/:ingredient?",
                 name: "byIngredient",
                 component: MealsByIngredient,
             },
+            {
+                path: '/meal/:id',
+                name: 'mealDetails',
+                component: MealDetails
+            }
         ]
     },   
     {
