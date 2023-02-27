@@ -28,13 +28,9 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam qui accusamus aut ad facere dolore ratione enim optio,
                 </p>
                 <div class="flex item-center justify-between">
-                    <a 
-                        :href="meal.strYoutube" 
-                        target="_blank" 
-                        class="px-3 py-2 rounded border-2 text-white border-red-600 bg-red-500 hover:bg-red-600 transtition-colors"
-                    >
+                    <YouTubeButton :href="meal.strYoutube">
                         Youtube
-                    </a>
+                    </YouTubeButton>
                 </div>
             </div>
         </div>
@@ -42,10 +38,11 @@
 </template>
 
 <script setup>
-import { computed } from '@vue/reactivity';
-import { onMounted, ref } from 'vue';
+import { computed } from "@vue/reactivity";
+import { onMounted, ref } from "vue";
 import { useRoute } from "vue-router";
-import store from '../store';
+import store from "../store";
+import YouTubeButton from "../components/YouTubeButton.vue"
 
 const route = useRoute();
 const keyword = ref("");
