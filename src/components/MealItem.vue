@@ -2,7 +2,7 @@
     <div 
         class="bg-white shadow rounded-x1"
     >
-        <router-link :to="{name: 'mealDetails', params: {id: meal.idMeal}}">
+        <router-link :to="{ name: 'mealDetails', params: {id: meal.idMeal}}">
             <img 
                 :src="meal.strMealThumb" 
                 :alt="meal.strMeal" 
