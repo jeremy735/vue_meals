@@ -1,6 +1,7 @@
 <template>
     <div 
-        class="bg-white shadow rounded-x1"
+        class="bg-white shadow rounded-x1
+        hover:scale-105 transitiob-all"
     >
         <router-link :to="{ name: 'mealDetails', params: {id: meal.idMeal}}">
             <img 

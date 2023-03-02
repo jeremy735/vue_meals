@@ -24,8 +24,14 @@ const route = useRoute();
 const keyword = ref("");
 const meals = computed(() => store.state.searchedMeals);
 
+// 如果搜尋欄位有資料去api呼叫資料
+// keyword是空的狀態的話去mutations呼叫setSearchedMeals變為空陣列
 function searchMeals(){
-   store.dispatch("searchMeals", keyword.value);
+    if(keyword.value){ 
+        store.dispatch("searchMeals", keyword.value);
+    }else{
+        store.commit("setSearchedMeals", []);
+    }
 }
 
 onMounted(() => {
