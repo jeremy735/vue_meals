@@ -3,7 +3,7 @@
         class="bg-white shadow rounded-x1
         hover:scale-105 transitiob-all"
     >
-        <router-link :to="{ name: 'mealDetails', params: {id: meal.idMeal}}">
+        <router-link :to="{name: 'mealDetails', params: {id: meal.idMeal}}">
             <img 
                 :src="meal.strMealThumb" 
                 :alt="meal.strMeal" 
@@ -13,12 +13,10 @@
         <div class="p-3">
             <h3 class="font-semibold">{{ meal.strMeal }}</h3>
             <p class="mb-4">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam qui accusamus aut ad facere dolore ratione enim optio,
+                {{ $filters.truncateWords(meal.strInstructions, 20) }}
             </p>
             <div class="flex item-center justify-between">
-                <YouTubeButton :href="meal.strYoutube">
-                    Youtube
-                </YouTubeButton>
+                <YouTubeButton :href="meal.strYoutube" />
             </div>
         </div>
     </div>
