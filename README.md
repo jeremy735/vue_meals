@@ -1,6 +1,6 @@
 # Vue 3 + Vite
 
-Clone the repository
-Run npm install
-Copy .env.example into .env
-Run npm run dev to start the application at http://localhost:3000
+1.Clone the repository
+2.Run npm install
+3.Copy .env.example into .env
+4.Run npm run dev to start the application at http://localhost:3000
